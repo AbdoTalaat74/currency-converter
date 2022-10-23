@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Currency Converter</string>
+    <string name="welcome_message">Welcome to Currency Converter App</string>
 </resources>
