@@ -1,9 +1,9 @@
-package com.example.currencyconverter.Authentication
+package com.example.currencyconverter.Models
 
 import com.squareup.moshi.JsonClass
 import com.google.gson.annotations.SerializedName;
 
-@JsonClass(generateAdapter = false)
+@JsonClass(generateAdapter = true)
 data class User(
 
     @SerializedName("email")

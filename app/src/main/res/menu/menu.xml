@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/currencies_page"
+        android:enabled="true"
+        android:icon="@drawable/ic_money"
+        android:title="@string/currencies" />
+    <item
+        android:id="@+id/convert_page"
+        android:enabled="true"
+        android:icon="@drawable/ic_convert"
+        android:title="@string/convert"
+        />
+    <item
+        android:id="@+id/statistics_page"
+        android:enabled="true"
+        android:icon="@drawable/ic_statistics"
+        android:title="@string/statistics"  />
+    <item
+        android:id="@+id/info_page"
+        android:enabled="true"
+        android:icon="@drawable/ic_info"
+        android:title="@string/info"  />
+</menu>

@@ -1,5 +1,6 @@
-package com.example.currencyconverter.Authentication
+package com.example.currencyconverter.UI.Authentication
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,6 +9,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.currencyconverter.API.UserAuthentication
+import com.example.currencyconverter.Models.User
+import com.example.currencyconverter.UI.HomeActivity
 import com.example.currencyconverter.R
 import com.example.currencyconverter.databinding.FragmentLoginBinding
 import com.google.android.material.snackbar.Snackbar
@@ -15,10 +18,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class LoginFragment: Fragment()  {
+class LoginFragment : Fragment() {
 
-    private lateinit  var email: String
-    private lateinit  var password: String
+    private lateinit var email: String
+    private lateinit var password: String
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -47,6 +50,8 @@ class LoginFragment: Fragment()  {
                             "Login Successfully",
                             Snackbar.LENGTH_LONG
                         ).show()
+                        goToHomeActivity()
+
                     } else {
                         Snackbar.make(binding.loginLayout, "Login Failed", Snackbar.LENGTH_LONG)
                             .show()
@@ -66,4 +71,10 @@ class LoginFragment: Fragment()  {
 
         return binding.root
     }
+
+    private fun goToHomeActivity() {
+        val intent = Intent(this.context, HomeActivity::class.java)
+        startActivity(intent)
+    }
+
 }
