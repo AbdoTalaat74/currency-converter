@@ -1,4 +1,4 @@
-package com.example.currencyconverter.UI.Authentication
+package com.example.currencyconverter.ui.authentication
 
 import android.os.Bundle
 import android.util.Log
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.currencyconverter.API.UserAuthentication
-import com.example.currencyconverter.Models.User
+import com.example.currencyconverter.api.UserAuthentication
+import com.example.currencyconverter.models.User
 import com.example.currencyconverter.R
 import com.example.currencyconverter.databinding.FragmentRegisterBinding
 import com.google.android.material.snackbar.Snackbar
@@ -44,7 +44,7 @@ class RegisterFragment : Fragment() {
 
             val user = User(email, password, phoneNumber)
 
-            val call: Call<User> = UserAuthentication.retrofitService.register(user)
+            val call: Call<User> = UserAuthentication.retrofitUserService.register(user)
 
             call.enqueue(object : Callback<User> {
                 override fun onResponse(call: Call<User>, response: Response<User>) {

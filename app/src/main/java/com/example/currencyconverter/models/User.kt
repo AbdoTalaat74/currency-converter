@@ -1,4 +1,4 @@
-package com.example.currencyconverter.Models
+package com.example.currencyconverter.models
 
 import com.squareup.moshi.JsonClass
 import com.google.gson.annotations.SerializedName;

@@ -1,4 +1,4 @@
-package com.example.currencyconverter.UI.Authentication
+package com.example.currencyconverter.ui.authentication
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,9 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.currencyconverter.API.UserAuthentication
-import com.example.currencyconverter.Models.User
-import com.example.currencyconverter.UI.HomeActivity
+import com.example.currencyconverter.api.UserAuthentication
+import com.example.currencyconverter.models.User
+import com.example.currencyconverter.ui.HomeActivity
 import com.example.currencyconverter.R
 import com.example.currencyconverter.databinding.FragmentLoginBinding
 import com.google.android.material.snackbar.Snackbar
@@ -40,7 +40,7 @@ class LoginFragment : Fragment() {
             password = binding.etPassword.text.toString()
 
             val user = User(email, password, null)
-            val call = UserAuthentication.retrofitService.login(user)
+            val call = UserAuthentication.retrofitUserService.login(user)
 
             call.enqueue(object : Callback<User> {
                 override fun onResponse(call: Call<User>, response: Response<User>) {

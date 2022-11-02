@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.currencyconverter.UI.Authentication.LoginFragment"
+        android:name="com.example.currencyconverter.ui.authentication.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.currencyconverter.UI.Authentication.RegisterFragment"
+        android:name="com.example.currencyconverter.ui.authentication.RegisterFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_register">
         <action
