@@ -1,12 +1,11 @@
-package com.example.currencyconverter.models
+package com.example.currencyconverter.ui.main
 
-import android.app.Application
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.currencyconverter.api.CurrencyObject
-import com.google.android.material.snackbar.Snackbar
+import com.example.currencyconverter.models.Currency
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

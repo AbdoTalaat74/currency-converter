@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vModel"
-            type="com.example.currencyconverter.models.MainViewModel" />
+            type="com.example.currencyconverter.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

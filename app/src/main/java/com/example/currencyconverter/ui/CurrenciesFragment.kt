@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.currencyconverter.ui.Main.MainAdapter
-import com.example.currencyconverter.models.MainViewModel
+import com.example.currencyconverter.ui.main.MainAdapter
+import com.example.currencyconverter.ui.main.MainViewModel
 import com.example.currencyconverter.databinding.FragmentCurrenciesBinding
 
 class CurrenciesFragment : Fragment() {
