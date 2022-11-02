@@ -17,28 +17,29 @@ class MainViewModel() : ViewModel() {
         get() = _currencyList
 
 
-    fun getCurrencies(){
+    fun getCurrencies() {
         _currencyList.value = fetchCurrencies()
     }
 
 
     private fun fetchCurrencies(): List<Currency> {
-         var data:List<Currency> = emptyList()
-        CurrencyObject.retrofitCurrencyService.getAllCurrencies().enqueue(object : Callback<List<Currency>>{
-            override fun onResponse(
-                call: Call<List<Currency>>,
-                response: Response<List<Currency>>
-            ) {
-                Log.e("CurrencyViewModel","Success")
-                data = response.body()!!
-                _currencyList.value = response.body()
-            }
+        var data: List<Currency> = emptyList()
+        CurrencyObject.retrofitCurrencyService.getAllCurrencies()
+            .enqueue(object : Callback<List<Currency>> {
+                override fun onResponse(
+                    call: Call<List<Currency>>,
+                    response: Response<List<Currency>>
+                ) {
+                    Log.e("CurrencyViewModel", "Success")
+                    data = response.body()!!
+                    _currencyList.value = response.body()
+                }
 
-            override fun onFailure(call: Call<List<Currency>>, t: Throwable) {
-                Log.e("CurrencyViewModel","Failed")
-            }
+                override fun onFailure(call: Call<List<Currency>>, t: Throwable) {
+                    Log.e("CurrencyViewModel", "Failed")
+                }
 
-        })
-         return data
+            })
+        return data
     }
 }
