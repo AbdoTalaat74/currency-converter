@@ -7,11 +7,14 @@ import com.squareup.moshi.JsonClass
 data class Currency(
 
     @SerializedName("id")
-    val id: Int,
+    val id: Int?,
 
     @SerializedName("name")
     val name: String,
 
     @SerializedName("sign")
-    val sign: String
+    val sign: String,
+
+    @SerializedName("valueAgainstUsd")
+    val valueAgainstUsd:Float?
 )

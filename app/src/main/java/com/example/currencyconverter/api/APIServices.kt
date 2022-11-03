@@ -15,7 +15,11 @@ import retrofit2.http.POST
 
 interface CurrencyInterface {
     @GET("/api/Currency/GetAllCurrencies")
-     fun getAllCurrencies(): Call<List<Currency>>
+    fun getAllCurrencies(): Call<List<Currency>>
+
+    @POST("/api/Currency/AddCurrency")
+    fun addCurrency(@Body currency: Currency) : Call<Currency>
+
 }
 
 interface UserAuthenticationInterface {
@@ -36,6 +40,12 @@ val retrofit: Retrofit =
         )
     ).build()
 
+val retrofit3: Retrofit =
+    Retrofit.Builder().baseUrl("http://currency-converter.somee.com").addConverterFactory(
+        GsonConverterFactory.create(
+            gson
+        )
+    ).build()
 
 
 object UserAuthentication {
@@ -48,7 +58,7 @@ object UserAuthentication {
 
 object CurrencyObject {
     val retrofitCurrencyService: CurrencyInterface by lazy {
-        retrofit.create(CurrencyInterface::class.java)
+        retrofit3.create(CurrencyInterface::class.java)
     }
 }
 

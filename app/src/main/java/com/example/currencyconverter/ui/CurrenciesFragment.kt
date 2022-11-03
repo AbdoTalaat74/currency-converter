@@ -6,6 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import com.example.currencyconverter.R
 import com.example.currencyconverter.ui.main.MainAdapter
 import com.example.currencyconverter.ui.main.MainViewModel
 import com.example.currencyconverter.databinding.FragmentCurrenciesBinding
@@ -18,6 +21,7 @@ class CurrenciesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         val binding = FragmentCurrenciesBinding.inflate(inflater)
 
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
@@ -31,6 +35,9 @@ class CurrenciesFragment : Fragment() {
         val adapter = MainAdapter()
         binding.currenciesRecycler.adapter = adapter
 
+        binding.fab.setOnClickListener {
+            findNavController().navigate(R.id.addCurrencyFragment)
+        }
 
         return binding.root
 

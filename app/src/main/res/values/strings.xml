@@ -5,4 +5,8 @@
     <string name="convert">Convert</string>
     <string name="statistics">Statistics</string>
     <string name="info">Info</string>
+    <string name="currency_name">Currency Name</string>
+    <string name="currency_sign">Currency Sign</string>
+    <string name="value_against_usd">Value against USD</string>
+    <string name="add_currency">Add Currency</string>
 </resources>

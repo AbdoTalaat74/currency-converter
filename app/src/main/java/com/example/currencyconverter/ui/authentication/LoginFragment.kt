@@ -27,7 +27,7 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
+        inflater.context.setTheme(R.style.Theme_CurrencyConverter)
         val binding = FragmentLoginBinding.inflate(inflater)
         binding.lifecycleOwner = this
         binding.btnGoToRegister.setOnClickListener {

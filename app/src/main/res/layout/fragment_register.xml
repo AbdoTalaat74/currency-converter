@@ -8,7 +8,9 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:theme="@style/Theme.CurrencyConverter"
         android:layout_width="match_parent"
+
         android:layout_height="match_parent">
 
         <ImageView
@@ -18,18 +20,18 @@
             android:layout_marginStart="-80dp"
             android:layout_marginTop="-80dp"
             android:src="@drawable/circle"
-            app:tint="@color/orange2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/orange2" />
 
         <ImageView
             android:layout_width="260dp"
             android:layout_height="260dp"
             android:layout_marginTop="-180dp"
             android:src="@drawable/circle"
-            app:tint="@color/orange1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/orange1" />
 
         <ImageView
             android:layout_width="200dp"
@@ -37,33 +39,33 @@
             android:layout_marginEnd="-100dp"
             android:layout_marginBottom="-40dp"
             android:src="@drawable/circle"
-            app:tint="@color/orange2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:tint="@color/orange2" />
 
         <ImageView
             android:layout_width="320dp"
             android:layout_height="320dp"
             android:layout_marginBottom="-240dp"
             android:src="@drawable/circle"
-            app:tint="@color/orange1"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:tint="@color/orange1" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="-80dp"
-            android:layout_marginEnd="60dp"
             android:layout_marginTop="40dp"
-            app:contentPaddingTop="16dp"
-            app:contentPaddingBottom="16dp"
+            android:layout_marginEnd="60dp"
             android:backgroundTint="@color/white"
-            app:cardElevation="8dp"
             app:cardCornerRadius="80dp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:cardElevation="8dp"
+            app:contentPaddingBottom="16dp"
+            app:contentPaddingTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_register">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -75,8 +77,8 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_marginStart="110dp"
-                    android:src="@drawable/ic_user"
                     android:scaleType="fitXY"
+                    android:src="@drawable/ic_user"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -111,8 +113,8 @@
                     android:layout_height="25dp"
                     android:layout_marginStart="110dp"
                     android:layout_marginTop="16dp"
-                    android:src="@drawable/ic_password"
                     android:scaleType="fitXY"
+                    android:src="@drawable/ic_password"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/view1" />
 
@@ -148,11 +150,11 @@
                     android:layout_height="25dp"
                     android:layout_marginStart="110dp"
                     android:layout_marginTop="16dp"
-                    android:src="@drawable/ic_call"
                     android:scaleType="fitXY"
+                    android:src="@drawable/ic_call"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/view2"
-                    app:layout_constraintBottom_toBottomOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@id/view2" />
 
                 <EditText
                     android:id="@+id/et_register_phoneNumber"
@@ -162,14 +164,14 @@
                     android:layout_marginEnd="48dp"
                     android:background="@color/white"
                     android:hint="Phone Number"
+                    android:inputType="phone"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
                     app:layout_constraintBottom_toBottomOf="@id/iv_register_email"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/iv_register_email"
                     app:layout_constraintTop_toTopOf="@id/iv_register_email"
-                    tools:ignore="TouchTargetSizeCheck"
-                    android:inputType="phone"/>
+                    tools:ignore="TouchTargetSizeCheck" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
@@ -178,12 +180,12 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:backgroundTint="@color/blue3"
-            app:cardElevation="24dp"
             app:cardCornerRadius="35dp"
-            app:layout_constraintStart_toEndOf="@id/cv_container"
+            app:cardElevation="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/cv_container"
             app:layout_constraintEnd_toEndOf="@id/cv_container"
-            app:layout_constraintTop_toTopOf="@id/cv_container"
-            app:layout_constraintBottom_toBottomOf="@id/cv_container">
+            app:layout_constraintStart_toEndOf="@id/cv_container"
+            app:layout_constraintTop_toTopOf="@id/cv_container">
 
             <ImageButton
                 android:id="@+id/btn_register"
@@ -203,12 +205,12 @@
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="80dp"
             android:text="Register"
-            android:textSize="40sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
             android:textAlignment="center"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_circle" />
 
         <androidx.cardview.widget.CardView
@@ -217,23 +219,23 @@
             android:layout_marginEnd="-25dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/white"
-            app:cardElevation="8dp"
             app:cardCornerRadius="25dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/tv_register">
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_register"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <Button
                 android:id="@+id/btn_go_to_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
                 android:paddingStart="25dp"
                 android:paddingEnd="50dp"
                 android:text="Login"
-                android:textColor="@color/black"
                 android:textAllCaps="false"
-                android:background="@android:color/transparent"
-                android:elevation="0dp" />
+                android:textColor="@color/black" />
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

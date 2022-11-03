@@ -14,7 +14,11 @@
         android:id="@+id/currenciesFragment"
         android:name="com.example.currencyconverter.ui.CurrenciesFragment"
         android:label="CurrenciesFragment"
-        tools:layout="@layout/fragment_currencies"/>
+        tools:layout="@layout/fragment_currencies">
+        <action
+            android:id="@+id/action_currenciesFragment_to_addCurrencyFragment"
+            app:destination="@id/addCurrencyFragment" />
+    </fragment>
     <fragment
         android:id="@+id/statisticsFragment"
         android:name="com.example.currencyconverter.ui.StatisticsFragment"
@@ -25,4 +29,9 @@
         android:name="com.example.currencyconverter.ui.InfoFragment"
         android:label="InfoFragment"
         tools:layout="@layout/fragment_info"/>
+    <fragment
+        android:id="@+id/addCurrencyFragment"
+        android:name="com.example.currencyconverter.ui.AddCurrencyFragment"
+        android:label="AddCurrencyFragment"
+        tools:layout="@layout/fragment_add_currency"/>
 </navigation>
