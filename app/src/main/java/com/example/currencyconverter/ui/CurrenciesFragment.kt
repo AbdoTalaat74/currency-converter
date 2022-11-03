@@ -26,7 +26,7 @@ class CurrenciesFragment : Fragment() {
 
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
-        viewModel.getCurrencies()
+        viewModel.fetchDataCoroutines()
 
         binding.lifecycleOwner = this
 
